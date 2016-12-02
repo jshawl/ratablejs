@@ -30,7 +30,8 @@ window.ratable = ( _ => {
     }
     .ratablejs span{
       filter: grayscale(100%);
-      padding:.5em;
+      padding:.25em;
+      font-size:1.2em;
     }
     .ratablejs span:last-of-type{
       padding-left:0;
