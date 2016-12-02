@@ -53,7 +53,7 @@ window.ratable = ( _ => {
     Array.from(document.querySelectorAll(selector)).forEach( el => {
       console.log(el)
       el.setAttribute('type','hidden')
-      el.parentNode.insertBefore(view(el, opts),el)
+      el.parentNode.insertBefore(view(el, opts || {}),el)
     })
   }
   makeRatable('[data-ratable]')
