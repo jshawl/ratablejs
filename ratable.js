@@ -2,10 +2,18 @@ window.ratable = ( _ => {
   function view(original, opts){
     var div = document.createElement('div')
     div.className = 'ratablejs'
+    try{
+      var rating = parseInt(window.location.search.match(/rating=([0-9])/)[1])
+    } catch (e) {
+      var rating = 0
+    }
     for(let i = 0; i < 5; i++){
       var star = document.createElement('span')
       star.innerHTML = '&#9733;'
       star.style.color = opts.color || 'gold'
+      if(i == 5 - rating){
+        star.classList.add('active')
+      }
       star.setAttribute('data-index', 5 - i)
       star.addEventListener('click', function(e){
         onClick(e, original)
