@@ -1,6 +1,8 @@
 body{
   padding: 1em;
   font-family:'Helvetica Neue', Helvetica, sans-serif;
+  max-width:40em;
+  margin:auto;
 }
 
 h1, h2, h3{
@@ -8,5 +10,15 @@ h1, h2, h3{
 }
 
 pre, code{
-  font-family: Monaco, sans-serif;
+  font-family: Monaco, monospace;
+}
+
+.center{
+  text-align:center;
+}
+
+.ratablejs > span{
+  font-size:2em !important;
+  padding:0 !important;
+  transition: all .2s ease;
 }
